@@ -1,3 +1,7 @@
 # Rick and Morty
 
-This a page aabout Rick and morty
+This a page about Rick and morty
+
+> This is not a full version
+>
+> this is gonna be finished and improved
