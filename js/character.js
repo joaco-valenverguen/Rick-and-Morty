@@ -61,8 +61,26 @@ async function alonChar(id) {
   console.log(res);
 
   content.innerHTML = ``;
-  const divi = document.createElement("div");
+  let divi = document.createElement("div");
+  divi.className = "all-content";
   divi.id = res.id;
+  divi.innerHTML = `
+  <div class='title'><h1>${res.name}</h1></div>
+  <div class='char-content'>
+    <img src='${res.image}' />
+    <div class='inside-content'>
+      <h3>Status: ${res.status}</h3>
+      <h4 class="species card-content">Specie: ${res.species}</h4>
+      <h4 class="type card-content">Type: ${res.type}</h4>
+      <h4 class="gender card-content"Gender: >Gender: ${res.gender}</h4>
+      <h4 class="location card-content">Location: ${res.location.name}</h4>
+      <h4>Origin : ${res.origin.name}</h4>
+    </div>
+  </div>
+  `;
+  for (x = 0; x < res.episode.length; x++) {
+    divi.innerHTML += `<h3>${res.episode[x]}</h3>`;
+  }
 
-  //content.appendChild(divi);
+  content.appendChild(divi);
 }

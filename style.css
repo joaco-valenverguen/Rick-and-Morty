@@ -69,3 +69,14 @@ img {
 .taker {
   cursor: pointer;
 }
+.char-content {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(5, 1fr);
+}
+.inside-content {
+  grid-column: 2/-1;
+}
+.all-content {
+  grid-column: 1/-1;
+}
